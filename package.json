@@ -1,21 +1,21 @@
 {
-  "name": "xl-report-mapping",
-  "version": "2.3.0",
-  "description": "Co dependent on xl-report",
+  "name": "react-skeleton",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harsh-a1/xl-report-mapping.git"
+    "url": "git+https://github.com/harsh-a1/react-skeleton.git"
   },
   "author": "harsh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/harsh-a1/xl-report-mapping/issues"
+    "url": "https://github.com/harsh-a1/react-skeleton/issues"
   },
-  "homepage": "https://github.com/harsh-a1/xl-report-mapping#readme",
+  "homepage": "https://github.com/harsh-a1/react-skeleton#readme",
   "dependencies": {
     "history": "^4.7.2",
     "idempotent-babel-polyfill": "^0.1.1",

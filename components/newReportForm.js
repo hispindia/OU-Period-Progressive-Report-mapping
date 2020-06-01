@@ -64,7 +64,7 @@ export function NewReportForm(props){
         var PreportData = dsServiceData.getValue(reportKey);
         
         var mdService = new dhis2API.metadataService();
-        var deP = mdService.getObj("dataElements?paging=false&fields=id,name,categoryCombo[id,name,categoryOptionCombos[id,name]],dataElementGroups[id,name]");
+        var deP = mdService.getObj("dataElements?paging=false&fields=id,name,categoryCombo[id,name,categoryOptionCombos[id,name]]");
         var ougP = mdService.getObj("organisationUnitGroups?paging=false&fields=id,name");
         
         Promise.all([deP,ougP,PreportMetadata,PreportData]).then(values => {
@@ -115,7 +115,7 @@ export function NewReportForm(props){
     
         if (state.data.mapping instanceof File){
             fileService.loadJsonFile(state.data.mapping).then((json)=>{
-                state.data.mapping=JSON.parse(json);
+                state.data.mapping=JSON.parse(JSON.parse(json));
                 saveReport();
             })
         }else{

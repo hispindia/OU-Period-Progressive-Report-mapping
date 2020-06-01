@@ -8,11 +8,10 @@ export function DecocFormComponent(props){
     var init = props.init;
 
      var decocRow = {
-         de : "-1",
-         degroup:"all",
-         coc :"-1",
-         row: "",
-         ougroup : "nogroup"        
+        de : "-1",
+        coc :"-1",
+        row: "",
+        ougroup : "nogroup"        
     }
 
     var calcRow = {
@@ -119,10 +118,32 @@ function Decoc(props){
         
         var grps = groups.split("-");
         return grps.map(key => {
-                return <li>{init.ouGroupMap[key].name}</li>
+            return <li>{init.ouGroupMap[key]?init.ouGroupMap[key].name : <i>NA</i>}</li>
         })
     }
 
+    function getDeName(uid){
+
+        var name = uid;
+
+        if (init.deMap[uid]){
+            name = init.deMap[uid].name;
+        }
+        
+        return name;
+    }
+
+    function getCocName(uid){
+        
+        var name = uid;
+
+        if (init.cocMap[uid]){
+            name = init.cocMap[uid].name;
+        }
+        
+        return name;
+    }
+    
     function onClick(){
         if (state.click){return}
         state.click = true;
@@ -146,8 +167,8 @@ function Decoc(props){
         return(
                 <div key={"div_decoc_"+props.index}>
                 <div onClick={onClick} className={state.click?'decocSelected':''}>
-                <div> <b>De:</b> {init.deMap[state.decoc.de].name} </div>
-                <div> <b>Coc:</b> {init.cocMap[state.decoc.coc].name} </div>
+                <div> <b>De:</b> {getDeName(state.decoc.de)} </div>
+                <div> <b>Coc:</b> {getCocName(state.decoc.coc)} </div>
                 <div className="highlightRow"><b> Row:</b> {state.decoc.row} </div>
                 <div> <ul>{getGroups(state.decoc.ougroup)}</ul> </div>
                 </div>

@@ -8,8 +8,8 @@
   },
   "appType": "APP",
   "name": "OU-Period-Progressive-Report-mapping",
-  "version": "2.3.0",
-  "description": "Co dependent on xl-report",
+  "version": "1.0.0",
+  "description": "data store",
   "developer": {
     "name": "mithilesh",
     "email": "mithilesh.hisp@gmail.com"
