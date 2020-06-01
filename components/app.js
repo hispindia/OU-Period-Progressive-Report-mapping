@@ -14,7 +14,7 @@ export function App(props){
         var baseName = props.baseURL.split("/")
         baseName = baseName[baseName.length-1];
         
-        return (  <Router basename={baseName+"/api/apps/OU-Period-Progressive-Report-mapping/index.html#"} >
+        return (  <Router basename={baseName+"/api/apps/OU-Period-Progressive-Report-mapping/index.html#"} >                 
                   <Switch>
                   <Route exact path="/reports"  component={ReportList}  />
                   <Route exact path="/reports/add"  component={NewReportForm}  />
